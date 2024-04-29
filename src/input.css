@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 table,
 th,

@@ -793,6 +793,13 @@ video {
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+body{
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 table,
 th,
 td {

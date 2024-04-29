@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System
+    </title>
+    <link href="./output.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div
+      class="  border-2 rounded-xl border-blue-500 my-4   w-2/6 mx-auto text-blue-500">
+      <h1 class="text-center mx-auto my-2 text-3xl font-bold ">Student
+        Registration
+        System</h1>
+    </div>
+
+    <!-- main section -->
+
+    <div class="mt-10 flex gap-1 justify-between ">
+
+      <!-- registration form -->
+
+      <div class="mx-8 border-2 p-5 rounded-3xl ">
+        <h1
+          class="text-center py-4 text-blue-500 font-bold text-3xl">Registration
+          Form</h1>
+        <div class="flex flex-col gap-2">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" placeholder="Student Name"
+            class="custom-input">
+          <label for="id"></label>
+          <input type="number" name="id" id="id" placeholder="Student Id"
+            class="custom-input">
+          <label for="class"></label>
+          <input type="number" name="class" id="class" placeholder="Class"
+            class="custom-input">
+          <label for="contactNumber"></label>
+          <input type="number" name="contactNumber" id="contactNumber"
+            class="custom-input"
+            placeholder="Contact Number">
+          <label for="email"></label>
+          <input type="email" name="email" id="email"
+            class="custom-input invalid:border-red-500 invalid:text-red-500"
+            placeholder="Email">
+          <label for="address"></label>
+          <input type="text" name="address" id="address"
+            class="custom-input invalid:border-red-500 invalid:text-red-500"
+            placeholder="Address">
+          <button onclick="registerStudent()"
+            class="custom-input text-center pr-[15px] bg-blue-600 text-white text-2xl ">Submit</button>
+        </div>
+
+      </div>
+
+      <div class="mr-10 border-2 p-5 rounded-3xl w-full">
+        <h1
+          class="text-center py-4 text-blue-500 font-bold text-3xl">Registered
+          Students </h1>
+
+        <div class="overflow-y-scroll max-h-[450px]">
+
+          <table
+            class="w-full border border-collapse ">
+            <thead>
+              <tr
+                class=" text-white text-xl bg-blue-500 px-4 ">
+                <th>Name</th>
+                <th>Id</th>
+                <th>Class</th>
+                <th>Contact no.</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- edit section -->
+
+    <!-- overlay update form-->
+
+    <div
+      class="flex flex-col justify-center items-center
+        border-2 p-5 rounded-3xl overlay w-full  h-full"
+      id="overlay">
+      <div class="flex gap-12  ">
+        <h1
+          class=" py-4 text-white font-bold text-3xl">Edit Student
+          Record</h1>
+        <img src="./close.png" alt="close"
+          class=" cursor-pointer  hover:scale-105" onclick="closeOverlay()">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="name"></label>
+        <input type="text" name="name" id="new_name" placeholder="Student Name"
+          class="custom-input">
+        <label for="id"></label>
+        <input type="text" name="id" id="new_id" placeholder="Student Id"
+          class="custom-input">
+        <label for="class"></label>
+        <input type="number" name="class" id="new_class" placeholder="Class"
+          class="custom-input">
+        <label for="contactNumber"></label>
+        <input type="number" name="contactNumber" id="new_contactNumber"
+          class="custom-input"
+          placeholder="Contact Number">
+        <label for="email"></label>
+        <input type="email" name="email" id="new_email"
+          class="custom-input invalid:border-red-500 invalid:text-red-500"
+          placeholder="Email">
+        <label for="address"></label>
+        <input type="text" name="address" id="new_address"
+          class="custom-input invalid:border-red-500 invalid:text-red-500"
+          placeholder="Address">
+        <button onclick="updateStudentData()"
+          class="custom-input text-center pr-[15px] bg-blue-600 text-white text-2xl ">Update</button>
+      </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
